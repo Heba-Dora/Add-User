@@ -1,10 +1,16 @@
 import React from 'react'
+import classes from './List.module.css'
+import Card from './Card'
 
 function List({newUser}) {
   return (
-    <div>
-        <div>{newUser.title} {newUser.age}</div>
-    </div>
+    <Card className={classes.users}>
+        <ul>
+            <li>
+                {newUser.title} {newUser.age}
+            </li>
+        </ul>
+    </Card>
   )
 }
 

@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import Card from './Card'
 import classes from './AddUser.module.css'
-import classes from './Button.module.css'
+import Button from './Button'
+
 
 function AddUser({addUserProp}, props) {
     const [title, setTitle]= useState('')
@@ -36,15 +37,13 @@ function AddUser({addUserProp}, props) {
             <label>Name</label>
             <input type='text' value={title} onChange={titleHandler}/>
        
-            <label>age</label>
+            <label>Age</label>
             <input type='number' value={age}  onChange={ageHandler}/>
     
-        <button type={props.type || 'button'}
-        className={classes.button}
-        onClick={props.onClick}
+        <Button  type='submit'
 
         
-        >Add User</button>
+        >Add User</Button>
         
         
     </form>
